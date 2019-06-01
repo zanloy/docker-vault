@@ -2,7 +2,7 @@ This is a docker set that builds a consul container, a vault container (that use
 
 **All example command MUST be run in the root directory of the repo.**
 
-# Installation
+# Usage:
 
 * Clone the repo
 
