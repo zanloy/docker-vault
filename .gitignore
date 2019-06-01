@@ -1,4 +1,4 @@
 data/consul
-data/backup
+data/vault
 data/keys.txt
 scripts/secrets.json
