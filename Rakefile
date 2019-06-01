@@ -17,3 +17,7 @@ end
 task :seed do
   exec('sudo docker-compose exec vault /scripts/seed.sh')
 end
+
+task :unseal do
+  exec ('sudo docker-compose exec vault /scripts/unseal.sh')
+end

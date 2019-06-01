@@ -1,12 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
-## CONFIG LOCAL ENV
-echo "[*] Config local environment..."
-alias vault='docker-compose exec vault vault "$@"'
-export VAULT_ADDR=http://localhost:8200
+# Config
+echo "[*] Configuring local environment..."
+_VAULT_KEY=$(grep 'Unseal Key 1:' /data/keys.txt | awk '{print $NF}')
 
 ## UNSEAL VAULT
-echo "[*] Unseal vault..."
-vault unseal -address=${VAULT_ADDR} $(grep 'Key 1:' ./data/keys.txt | awk '{print $NF}')
-vault unseal -address=${VAULT_ADDR} $(grep 'Key 2:' ./data/keys.txt | awk '{print $NF}')
-vault unseal -address=${VAULT_ADDR} $(grep 'Key 3:' ./data/keys.txt | awk '{print $NF}')
+echo "[*] Unsealing vault..."
+vault operator unseal ${_VAULT_KEY}
