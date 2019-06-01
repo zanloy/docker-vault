@@ -43,7 +43,7 @@ You will need to create a file /scripts/secrets.json with your data. Below is an
 
 Using Rake: `rake seed`
 
-Using Bash: `sudo docker-compose exec vault /scripts/seal.sh`
+Using Bash: `sudo docker-compose exec vault /scripts/seed.sh`
 
 * Destroy containers (data is persistant)
 
