@@ -1,4 +1,6 @@
 data/consul/*
+!data/consul/.keep
 data/vault/*
+!data/vault/.keep
 data/keys.txt
 scripts/secrets.json
