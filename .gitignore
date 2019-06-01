@@ -1,0 +1,4 @@
+data/consul
+data/backup
+data/keys.txt
+scripts/secrets.json
